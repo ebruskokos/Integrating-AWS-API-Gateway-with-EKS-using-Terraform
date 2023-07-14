@@ -4,9 +4,9 @@ resource "aws_subnet" "private-us-east-1a" {
   availability_zone = "us-east-1a"
 
   tags = {
-    "Name"                                     = "private-us-east-1a"
-    "kubernetes.io/role/internal-elb"          = "1"
-    "kubernetes.io/cluster${ver.cluster_name}" = "owned"
+    "Name"                                      = "private-us-east-1a"
+    "kubernetes.io/role/internal-elb"           = "1"
+    "kubernetes.io/cluster/${var.cluster_name}" = "owned"
 
   }
 
